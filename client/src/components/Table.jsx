@@ -2,6 +2,15 @@ import React from 'react'
 
 const Table = (props) => {
     const {resources, onClickMore} = props;
+    const handleAvailability = (availability) => {
+      if (availability === "available") {
+        return <p style={{ color: "green", fontWeight: "bold" }}>{availability}</p>;
+      } else {
+        return (
+          <p style={{ color: "red", fontWeight: "bold" }}>{availability}</p>
+        );
+      }
+    }
     
   return (
     <div>
